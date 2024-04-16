@@ -6,3 +6,32 @@
 .font-inter {
   font-family: "Inter", sans-serif;
 }
+
+header,
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.seat {
+  font-family: inter;
+  font-size: 18px;
+  font-weight: 500;
+  width: 80px;
+  height: 40px;
+  background-color: #f7f8f8;
+  border-radius: 12px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.seat.selected {
+  background-color: #1dd100;
+  color: white;
+}
+
+.seat-details {
+  text-align: center;
+  word-spacing: 120px;
+}
