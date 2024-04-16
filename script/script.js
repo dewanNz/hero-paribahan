@@ -129,11 +129,10 @@ function updateUI() {
   // Enable Next button for modal
 const phoneNumberInput = document.getElementById("phone-number");
 const phoneNumberInputValue = phoneNumberInput.value;
-if (selectedSeats > 0 && phoneNumberInputValue !=="") {
-  document.getElementById("next-button").removeAttribute("disabled");
-  
+const nextButton = document.getElementById("next-button");
+if (phoneNumberInputValue !=="" && selectedSeats > 0 ) {
+  nextButton.removeAttribute("disabled");
 } 
-
 
 }
 
