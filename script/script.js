@@ -44,14 +44,13 @@ const seatIds = [
 
 // Number of seats
 const totalSeats = seatIds.length;
-const seatPrice = 550; // Price per seat
+const seatPrice = 550; 
 
-// Track selected seats
 let selectedSeats = 0;
 let totalPrice = 0;
 let selectedSeatNumbers = [];
 
-// Function to toggle seat selection
+// Function for toggle seat selection
 function toggleSeat(seatId) {
   const seat = document.getElementById(seatId);
   const seatNumber = seat.textContent;
@@ -99,17 +98,16 @@ function updateUI() {
   document.getElementById("total-price").textContent = calculateTotalPrice();
   document.getElementById("grand-total").textContent =
     calculateGrandTotal(couponCode);
-  //document.getElementById("selected-seat-numbers").textContent =
-  // selectedSeatNumbers.join(", </br>");
+  
 
-  // Update selected seat numbers and prices
+  // Update selected seat numbers, class and prices
   const selectedSeatsElement = document.getElementById("selected-seat-numbers");
   selectedSeatsElement.innerHTML = "";
   for (let i = 0; i < selectedSeatNumbers.length; i++) {
     const seatNumber = selectedSeatNumbers[i];
-    const seatPrice = 550; // Price per seat
+    const seatPrice = 550; 
     const seatElement = document.createElement("p");
-    seatElement.textContent = `${seatNumber} \t\t  Economy \t\t${seatPrice}`;
+    seatElement.textContent = `${seatNumber}  Economy ${seatPrice}`;
     seatElement.classList.add("seat-details");
     selectedSeatsElement.appendChild(seatElement);
     if (i < selectedSeatNumbers.length - 1) {
