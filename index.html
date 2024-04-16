@@ -325,7 +325,7 @@
               <p>total price</p>
               <p>BDT <span id="total-price">0</span></p>
             </div>
-            <label class="input input-bordered flex items-center gap-2 p-8 m-4">
+            <label id="apply-box" class="input input-bordered flex items-center gap-2 p-8 m-4">
               <input type="text" id="coupon-code" class="grow" placeholder="Have any Coupon?" />
                <button id="apply-button" class="btn bg-[#1DD100] font-inter font-semibold text-white " onclick="applyCoupon()">Apply</button>
             </label> 
@@ -343,14 +343,35 @@
               <div class="label">
                 <span class="label-text font-inter font-semibold text-base text-[#030712]">Phone Number*</span>
               </div>
-              <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full  font-inter font-normal" required />
+              <input type="number" id="phone-number" placeholder="Enter your phone number" class="input input-bordered w-full  font-inter font-normal" required />
 
               <div class="label">
                 <span class="label-text font-inter font-semibold text-base text-[#030712]">Email ID</span>
               </div>
-              <input type="text" placeholder="Enter your email id" class="input input-bordered w-full  font-inter font-normal" />
+              <input type="email" placeholder="Enter your email id" class="input input-bordered w-full  font-inter font-normal" />
               
-              <a href="#my_modal_8" class="btn bg-[#1DD100] font-raleway font-extrabold text-white text-xl mt-5">Next</a>
+              <!-- <a id="next-button" href="#hero-modal"  class="btn bg-[#1DD100] font-raleway font-extrabold text-white text-xl mt-5 disabled" >Next</a> -->
+
+              <button id="next-button" class="btn bg-[#1DD100]  font-raleway font-extrabold text-white text-xl mt-5" onclick="my_modal_5.showModal()" disabled>Next</button>
+              <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box flex flex-col justify-center items-center text-center">
+                <img src="images/success.png" alt="">
+                <h3 class="font-bold text-lg text-[#1DD100] pt-5">SUCCESS</h3>
+                <p class="py-4 font-inter font-bold">Thank you for Booking Our Bus Seats.
+                  We are working hard to find the best service and deals for you.
+                  </p>
+                <p>
+                    Shortly you will find a confirmation in your email.
+                  </p>
+              
+                <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn bg-[#1DD100]  text-white">Continue</button>
+                </form>
+              </div>
+            </div>
+            </dialog>
 
               <div class="label">
                 <span class="label-text-alt font-inter text-base underline">Terms and Conditions</span>
@@ -392,22 +413,9 @@
     </footer>    
 
     
-    <div class="modal" role="dialog" id="my_modal_8">
-      <div class="modal-box flex flex-col justify-center items-center text-center">
-        <img src="images/success.png" alt="">
-        <h3 class="font-bold text-lg text-[#1DD100] pt-5">SUCCESS</h3>
-        <p class="py-4 font-inter font-bold">Thank you for Booking Our Bus Seats.
-          We are working hard to find the best service and deals for you.
-          </p>
-        <p>
-            Shortly you will find a confirmation in your email.
-          </p>
-        <div class="modal-action">
-         <a href="#" class="btn bg-[#1DD100]  text-white">Continue</a>
-        </div>
-      </div>
-    </div>
+    
 
+    
    
     <script src="script/script.js"></script>
     

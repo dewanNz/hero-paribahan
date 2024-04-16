@@ -74,6 +74,7 @@ function toggleSeat(seatId) {
   updateUI();
 }
 
+
 // Function to calculate total price
 function calculateTotalPrice() {
   return totalPrice;
@@ -115,17 +116,39 @@ function updateUI() {
     }
   }
 
+
+
+// Enable or disable apply button 
   const applyButton = document.getElementById("apply-button");
   if (selectedSeats < 4) {
     applyButton.disabled = true;
   } else {
     applyButton.disabled = false;
   }
+
+  // Enable Next button for modal
+const phoneNumberInput = document.getElementById("phone-number");
+const phoneNumberInputValue = phoneNumberInput.value;
+if (selectedSeats > 0 && phoneNumberInputValue !=="") {
+  document.getElementById("next-button").removeAttribute("disabled");
+  
+} 
+
+
 }
 
-// Function to apply coupon code
+ // Function to apply coupon code
 function applyCoupon() {
-  updateUI();
+  const couponCodeInput = document.getElementById("coupon-code").value;
+  const applyBox = document.getElementById("apply-box");
+
+  if (couponCodeInput === "coupon20" || couponCodeInput === "NEW15") {
+    updateUI();
+    applyBox.style.display = "none"; // Hide the level
+  } else {
+    alert("please insert valid coupon code");
+  }
+
 }
 
 // Assign click event listeners to seats
