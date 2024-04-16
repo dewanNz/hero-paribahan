@@ -83,7 +83,7 @@ function calculateGrandTotal(couponCode) {
   let grandTotal = totalPrice;
   if (selectedSeats === 4 && couponCode === "coupon20") {
     grandTotal *= 0.8; // 20% discount
-  } else if (selectedSeats === 4 && couponCode === "new15") {
+  } else if (selectedSeats === 4 && couponCode === "NEW15") {
     grandTotal *= 0.85; // 15% discount
   }
   return grandTotal;
